@@ -11,7 +11,7 @@ import (
 )
 
 func ReturnHTML(w http.ResponseWriter, r *http.Request) {
-	html := "../index.html"
+	html := "./index.html"
 	if _, err := os.Stat(html); os.IsNotExist(err) {
 		http.Error(w, "Файл не найден", http.StatusNotFound)
 		return
